@@ -17,9 +17,7 @@ variables:
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
- 
-
-steps:
+step:
 
 - task: Maven@3
 
@@ -29,7 +27,6 @@ steps:
 
     mavenPomFile: '$(Parameters.mavenPOMFile)'
 
-steps:
 
 - task: CopyFiles@2
 
@@ -45,7 +42,7 @@ steps:
 
   condition: succeededOrFailed()
 
-steps:
+
 
 - task: PublishBuildArtifacts@1
 
