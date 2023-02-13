@@ -22,7 +22,7 @@ stages:
     jobs:
       - job: build
         displayName: maven build
-        step:
+        steps:
          - task: Maven@3
            displayName: 'Maven app/pom.xml'
 
