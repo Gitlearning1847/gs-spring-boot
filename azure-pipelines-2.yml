@@ -6,11 +6,8 @@
 trigger:
 - master
 pool: ubuntu-latest
-stages:
-  - stage: build
-    jobs:
-      - job: build
-        steps:
+
+steps:
         - task: Maven@3
           displayName: 'maven app/pom.xml'
           inputs:
